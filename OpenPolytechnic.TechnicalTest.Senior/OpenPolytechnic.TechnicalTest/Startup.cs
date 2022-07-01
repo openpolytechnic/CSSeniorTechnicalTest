@@ -1,10 +1,17 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using OpenPolytechnic.TechnicalTest.Business.Calculators;
+using OpenPolytechnic.TechnicalTest.Business.Calculators.Interfaces;
+using OpenPolytechnic.TechnicalTest.Business.Promotions.Discounts;
+using OpenPolytechnic.TechnicalTest.Business.Promotions.Discounts.Interface;
+using OpenPolytechnic.TechnicalTest.Business.ShoppingCart;
+using OpenPolytechnic.TechnicalTest.Business.ShoppingCart.Interfaces;
+using OpenPolytechnic.TechnicalTest.Business.Stock;
+using OpenPolytechnic.TechnicalTest.Business.Stock.Interfaces;
 
 namespace OpenPolytechnic.TechnicalTest
 {
@@ -20,7 +27,19 @@ namespace OpenPolytechnic.TechnicalTest
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            // Dependency Injection
+            services.AddScoped<ICalculator, ClubMemberCalculator>();
+            services.AddScoped<ICalculator, GeneralCalculator>();
+            services.AddScoped<IDiscountFactory, DiscountFactory>();
+            services.AddScoped<IDiscountService, DiscountService>();
+            services.AddScoped<IShoppingCartService, ShoppingCartService>();
+            services.AddScoped<IStockService, StockService>();
+            services.AddScoped<IStockItemFactory, StockItemFactory>();
+
+            services.AddControllers(options =>
+            {
+
+            });
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
