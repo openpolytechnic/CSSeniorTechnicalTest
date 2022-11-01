@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
     <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
     <IsPackable>false</IsPackable>
@@ -21,6 +21,82 @@
     <Content Remove="$(SpaRoot)**" />
     <None Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\src\app\app.routing.ts" />
+    <None Remove="ClientApp\src\app\components\menu\menu.component.css" />
+    <None Remove="ClientApp\src\app\components\menu\menu.component.html" />
+    <None Remove="ClientApp\src\app\components\menu\menu.component.ts" />
+    <None Remove="ClientApp\src\app\components\menu\menu.module.ts" />
+    <None Remove="ClientApp\src\app\components\menu\menu.routing.ts" />
+    <None Remove="ClientApp\src\app\components\order\order.component.css" />
+    <None Remove="ClientApp\src\app\components\order\order.component.html" />
+    <None Remove="ClientApp\src\app\components\order\order.component.ts" />
+    <None Remove="ClientApp\src\app\components\order\order.module.ts" />
+    <None Remove="ClientApp\src\app\components\order\order.routing.ts" />
+    <None Remove="ClientApp\src\app\enum\customer-type.enum.ts" />
+    <None Remove="ClientApp\src\app\model\menu\menu-item.model.ts" />
+    <None Remove="ClientApp\src\app\model\menu\menu.model.ts" />
+    <None Remove="ClientApp\src\app\model\order\order-summary.model.ts" />
+    <None Remove="ClientApp\src\app\model\order\order.model.ts" />
+    <None Remove="ClientApp\src\app\model\order\orders.model.ts" />
+    <None Remove="ClientApp\src\app\service\order\order.service.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OpenPolytechnic.Business\OpenPolytechnic.Business.csproj" />
+    <ProjectReference Include="..\OpenPolytechnic.IoC\OpenPolytechnic.IoC.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\app.routing.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\components\menu\menu.routing.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\components\menu\menu.module.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\components\menu\menu.component.css">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\components\menu\menu.component.html">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\components\menu\menu.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\components\order\order.component.css">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\components\order\order.component.html">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\components\order\order.component.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\components\order\order.module.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\components\order\order.routing.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\enum\customer-type.enum.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\model\menu\menu-item.model.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\model\menu\menu.model.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\model\order\order-summary.model.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\model\order\order.model.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\model\order\orders.model.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\service\menu\menu.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\service\order\order.service.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

@@ -1,6 +1,22 @@
 # Open Polytechnic Technical Test - Senior Level
 
-For this test you will be tasked with creating an application that acts as a pseudo shopping cart. It will consist of an Angular front-end and a C#/.NET back-end. The client is to take input and pass it to the API, and display the resulting total cost of the purchase. How you design the application outside of this is up to you.
+-----------------------------------------
+
+IMPORTANT: Please note that this application was created with older technologies and has some compatibility issues with newer versions of Node.
+
+It is recommended that you temporarily downgrade your version of Node to 12.18.4: https://nodejs.org/download/release/v12.18.4/
+
+NPM latest version (8.19.2) is fine.
+
+The application uses Angular 8. This should not cause a problem if running through IIS Express in Visual Studio, and your CLI version should not matter.
+
+The backend uses .NET 6.0 and will require Visual Studio 2022. You can download the community version for free here: https://visualstudio.microsoft.com/vs/community/
+
+If you have any problems running this exercise, please get in contact.
+
+----------------------------------------- 
+
+For this test you will be tasked with completing an application that allows customers to place online orders for a small cafe. It will consist of an Angular front-end and a C#/.NET back-end. The client is to take input and pass it to the API, and display the resulting total cost of the purchase. There are currently systems in place to get and display menu information and to create an order. It is not suggested that you edit these. Placing an order will currently not make an API request, and there is no logic for receiving it, calculating costs, and returning a response. 
 
 There are some business rules that must be adhered to when creating your calculation logic.
 
@@ -8,21 +24,16 @@ There are some business rules that must be adhered to when creating your calcula
 
 Multiple discounts can be applied to the same purchase. All discounts are cumulative in the order listed below.
 
-1.	Clearance items are discounted 10%
-2.	Club members get a 5% discount on non-clearance items
-3.	For orders over $500, discount 5%
-4.	Purchases made in January are given a 2% discount
+1.	Senior citizens receive a 10% discount on any normal item ordered.
+2.	Adults, including seniors, pay a 5% surcharge on any menu ordered from the childrens menu.
+3.	For orders over $100, discount 5%
+4.	Standard orders made on Thursday are given a 2% discount -- this should not apply to the weekend menu, for which you can consider orders placed outside the weekend being considerd an order placed in advance
+5.	Items ordered from the catering menu should not receive any sort of discount regardless of who is ordering or when the order is placed.
 
-Additionally, buyers can apply a gift card of any value up to $100. If the gift card value exceeds the purchase price, the display should be $0. Don’t worry about calculating the gift card balance.
+Discounts should be considered cumulative, in the order presented above, and the original price rather than current subtotal used to apply them.
 
-Examples:
-- Club member purchases $550 worth of non-clearance items. Displayed price should be $496.38 ($496.375).
-- Buyer purchases $200 worth of non-clearance items on January 15 and has a $20 gift card. Displayed price should be $176.
-
-Additional requirements to implement if time allows:
-
-1.	Credit card purchase requires a 1% fee against the original sale price.
-2.	Club members get an additional 2% discount in July on any purchase item.
+Example:
+- A single senior citizen places an order for $120 on a Thursday. Their total should be $100.55.
 
 -----------------------------------------
 

@@ -3,7 +3,12 @@ import { RouterModule, Routes } from "@angular/router";
 
 const routes: Routes = [
   {
-    
+    path: 'menu',
+    loadChildren: () => import('./components/menu/menu.module').then(m => m.MenuModule)
+  },
+  {
+    path: 'order',
+    loadChildren: () => import('./components/order/order.module').then(m => m.OrderModule)
   }
 ]
 
@@ -12,4 +17,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRouterModule { }
-
