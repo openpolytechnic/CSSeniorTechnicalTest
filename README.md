@@ -16,6 +16,11 @@ If you have any problems running this exercise, please get in contact.
 
 ----------------------------------------- 
 
+Please create a new branch off master (named with your first name or initials) and make your changes there.
+Do NOT make any changes to the master branch
+
+----------------------------------------- 
+
 For this test you will be tasked with completing an application that allows customers to place online orders for a small cafe. It will consist of an Angular front-end and a C#/.NET back-end. The client is to take input and pass it to the API, and display the resulting total cost of the purchase. There are currently systems in place to get and display menu information and to create an order. It is not suggested that you edit these. Placing an order will currently not make an API request, and there is no logic for receiving it, calculating costs, and returning a response. 
 
 There are some business rules that must be adhered to when creating your calculation logic.
