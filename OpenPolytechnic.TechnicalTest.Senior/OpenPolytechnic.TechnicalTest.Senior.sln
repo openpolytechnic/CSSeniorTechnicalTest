@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31613.86
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenPolytechnic.TechnicalTest", "OpenPolytechnic.TechnicalTest\OpenPolytechnic.TechnicalTest.csproj", "{4576E84D-7227-448F-8404-8A0DA5307100}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenPolytechnic.TechnicalTest", "OpenPolytechnic.TechnicalTest\OpenPolytechnic.TechnicalTest.csproj", "{4576E84D-7227-448F-8404-8A0DA5307100}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenPolytechnic.Business", "OpenPolytechnic.Business\OpenPolytechnic.Business.csproj", "{2A8BBD47-88E9-40F0-A458-2C2E1982C0FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenPolytechnic.Business", "OpenPolytechnic.Business\OpenPolytechnic.Business.csproj", "{2A8BBD47-88E9-40F0-A458-2C2E1982C0FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenPolytechnic.IoC", "OpenPolytechnic.IoC\OpenPolytechnic.IoC.csproj", "{7E544774-491E-4A07-A14D-B3C50F24D729}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenPolytechnic.IoC", "OpenPolytechnic.IoC\OpenPolytechnic.IoC.csproj", "{7E544774-491E-4A07-A14D-B3C50F24D729}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
