@@ -17,6 +17,7 @@ namespace OpenPolytechnic.Business.Factories
             var items = new List<MenuItem>
             {
                 menuItemFactory.CurlyFries(),
+                menuItemFactory.BMeal(),
                 menuItemFactory.HotWings(),
                 menuItemFactory.GarlicBread(),
                 menuItemFactory.SquidRings(),
