@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using OpenPolytechnic.Business.Services;
 using OpenPolytechnic.Business.Services.Interfaces;
 
+
 namespace OpenPolytechnic.IoC
 {
     public static class DependencyWizard
@@ -16,6 +17,15 @@ namespace OpenPolytechnic.IoC
         {
             services.AddScoped<IMenuService, MenuService>();
 
+            services.AddScoped<IOriginalCostAndSurchargeCalculationService, OriginalCostAndSurchargeCalculationService>();
+
+            services.AddScoped<ISeniorDiscountCalculationService, SeniorDiscountCalculationService>();
+
+            services.AddScoped<IOverHundredDiscountCalculationService, OverHundredDiscountCalculationService>();
+
+            services.AddScoped<IThursdayDiscountCalculationService, ThursdayDiscountCalculationService>();
+
+            services.AddScoped<ICreateOrderSummaryService, CreateOrderSummaryService>();
         }
     }
 }
