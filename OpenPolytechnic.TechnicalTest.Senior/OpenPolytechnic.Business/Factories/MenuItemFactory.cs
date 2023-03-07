@@ -8,6 +8,8 @@ namespace OpenPolytechnic.Business.Factories
     {
         // Tapas
         public MenuItem CurlyFries() { return new MenuItem(1, "Curly Fries", "Like a pig's tail -- a fan favourite!", 4.99m, MenuItemType.Tapas, false); }
+
+        public MenuItem BMeal() { return new MenuItem(999, "B-Meal", "Burger + Fries + Spag + Cola!", 120m, MenuItemType.Tapas, false); }
         public MenuItem HotWings() { return new MenuItem(2, "Hot Wings", "Spicy chicken wings -- not for wimps!", 9.99m, MenuItemType.Tapas, false); }
         public MenuItem GarlicBread() { return new MenuItem(3, "Curly Fries", "A simple classic to keep the vampires at bay.", 3.99m, MenuItemType.Tapas, false); }
         public MenuItem SquidRings() { return new MenuItem(4, "Squid Rings", "Deep fried squid service with sweet chili sauce.", 7.99m, MenuItemType.Tapas, false); }
@@ -97,6 +99,7 @@ namespace OpenPolytechnic.Business.Factories
             return new List<MenuItem>
             {
                 CurlyFries(),
+                BMeal(),
                 HotWings(),
                 GarlicBread(),
                 SquidRings(),

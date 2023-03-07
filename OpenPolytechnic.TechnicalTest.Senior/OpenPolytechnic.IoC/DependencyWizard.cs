@@ -15,7 +15,7 @@ namespace OpenPolytechnic.IoC
         private static void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IMenuService, MenuService>();
-
+            services.AddScoped<IOrderService, OrderService>();
         }
     }
 }
